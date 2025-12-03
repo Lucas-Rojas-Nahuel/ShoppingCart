@@ -1,0 +1,70 @@
+.header {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+/* Chips */
+.chipsWrapper {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.chip {
+  background-color: #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: 0.2s ease;
+}
+
+.chip:hover {
+  background-color: #d1d5db;
+}
+
+.active {
+  background-color: #111827;
+  color: white;
+}
+
+.active:hover {
+  background-color: #1f2937;
+}
+
+/* Dark mode */
+.dark .title {
+  color: #fff;
+}
+.dark .subtitle {
+  color: #9ca3af;
+}
+
+.dark .chip {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+.dark .chip:hover {
+  background-color: #4b5563;
+}
+
+.dark .active {
+  background-color: #facc15;
+  color: #111;
+}
+.dark .active:hover {
+  background-color: #eab308;
+}

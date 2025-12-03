@@ -1,0 +1,67 @@
+.box {
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.pay {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 0.8rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: none;
+}
+
+.pay:hover {
+  background: #1d4ed8;
+}
+
+/* Modo Oscuro */
+.dark .box {
+  background: #1f2937;
+  border-color: #374151;
+}
+.dark .title {
+  color: white;
+}
+.dark .row span {
+  color: #d1d5db;
+}
+.dark .total strong {
+  color: white;
+}
+.dark .pay {
+  background: #eab308;
+  color: #111;
+}
+.dark .pay:hover {
+  background: #d4a307;
+}

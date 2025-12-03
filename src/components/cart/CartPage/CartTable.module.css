@@ -1,0 +1,113 @@
+.wrapper {
+  padding: 2rem 1rem;
+}
+
+.titleBox {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.productName {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.productDesc {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Contador */
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.counter button {
+  padding: 0.35rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #f3f4f6;
+  border: none;
+}
+
+.counter input {
+  width: 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.delete:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hideMd {
+    display: none;
+  }
+  .hideMdRight {
+    display: none;
+  }
+}

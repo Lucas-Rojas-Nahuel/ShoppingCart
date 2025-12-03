@@ -1,0 +1,66 @@
+.card {
+  background: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  overflow: hidden;
+  transition: 0.25s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+}
+
+/* Dark mode */
+.dark .card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Content */
+.content {
+  padding: 1.25rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Botón */
+.button {
+  width: 100%;
+  background-color: #111827;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1f2937;
+}
+
+/* Dark */
+.dark .button {
+  background-color: #facc15;
+  color: #111;
+}
+.dark .button:hover {
+  background-color: #eab308;
+}
