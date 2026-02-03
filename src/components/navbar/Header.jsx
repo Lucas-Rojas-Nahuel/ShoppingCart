@@ -3,7 +3,9 @@ import { Link } from "react-router";
 import navbaCss from "./navbar.module.css";
 
 import { CartIcon } from "./CartIcon/CartIcon";
-export const Navbar = () => {
+import { useCart } from "../../context/CartContext";
+export const Header = () => {
+  const { totalItems } = useCart();
   return (
     <header className={navbaCss.header}>
       <nav className={navbaCss.navContainer}>
@@ -15,12 +17,12 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className={navbaCss.link} to="/product">
+            <Link className={navbaCss.link} to="/products">
               Products
             </Link>
           </li>
         </ul>
-        <CartIcon count={3} />
+        <CartIcon count={totalItems} />
       </nav>
     </header>
   );
