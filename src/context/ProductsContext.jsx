@@ -9,6 +9,7 @@ export function ProductsProvider({ children }) {
   });
   const [search, setSearch] = useState("");
 
+  
   useEffect(() => {
     if (products.length > 0) return;
 

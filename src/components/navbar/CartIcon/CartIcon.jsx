@@ -12,3 +12,4 @@ export function CartIcon({ count = 0 }) {
     </Link>
   );
 }
+ 

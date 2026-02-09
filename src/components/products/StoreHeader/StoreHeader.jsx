@@ -8,7 +8,7 @@ export default function StoreHeader({ category, setCategory }) {
 
       <div className={styles.chipsWrapper}>
         <button
-          className={`${styles.chip} ${
+          className={`${styles.chip} ${ 
             category === "all" ? styles.active : ""
           } `}
           onClick={() => setCategory("all")}

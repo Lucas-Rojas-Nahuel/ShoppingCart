@@ -17,9 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   white-space: nowrap;
-
   padding: 0.75rem 1rem;
   box-sizing: border-box;
 }
@@ -28,10 +26,20 @@
   padding-left: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+
   gap: 1rem;
   list-style: none;
 }
 
 .link {
+  font-size: 1.1rem;
   text-decoration: none;
+  color: #1f2a38;
+  transition: background 0.5s;
+}
+
+.link:hover {
+  color: #0084d1;
+  transition: background 0.5s;
 }

@@ -7,6 +7,7 @@ export const Cart = () => {
   const { products, totalPrice } = useCart();
 
   const shipment = 10;
+
   return (
     <div className={CartTableStyles.wrapper}>
       {/* ➤ Título */}
@@ -29,9 +30,17 @@ export const Cart = () => {
             </thead>
 
             <tbody>
-              {products.map((item) => (
-                <ShoppingCartCard key={item.id} item={item} />
-              ))}
+              {!products[0] ? (
+                <tr>
+                  <td colSpan={"5"} className={CartTableStyles.td}>
+                    <p className={CartTableStyles.tdText}>Agregá productos</p>
+                  </td>
+                </tr>
+              ) : (
+                products.map((item) => (
+                  <ShoppingCartCard key={item.product.id} item={item} />
+                ))
+              )}
             </tbody>
           </table>
         </div>
@@ -42,7 +51,7 @@ export const Cart = () => {
 
           <div className={SummaryStyles.row}>
             <span>Subtotal</span>
-            <span>${totalPrice}</span>
+            <span>${totalPrice.toFixed(2)}</span>
           </div>
 
           <div className={SummaryStyles.row}>
@@ -52,7 +61,7 @@ export const Cart = () => {
 
           <div className={SummaryStyles.total}>
             <strong>Total</strong>
-            <strong>${totalPrice + shipment}</strong>
+            <strong>${(totalPrice + shipment).toFixed(2)}</strong>
           </div>
 
           <button className={SummaryStyles.pay}>Proceder al pago</button>

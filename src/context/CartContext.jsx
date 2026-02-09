@@ -42,6 +42,11 @@ export function CartProvider({ children }) {
     );
   };
 
+  const removeProduct = (id) => {
+    const newArray = products.filter((item) => item.product.id !== id);
+    setProducts(newArray);
+  };
+
   const clearCart = () => setProducts([]);
 
   // 🔹 Datos derivados
@@ -60,6 +65,7 @@ export function CartProvider({ children }) {
         addQuantity,
         removeQuantity,
         clearCart,
+        removeProduct,
         totalItems,
         totalPrice,
       }}

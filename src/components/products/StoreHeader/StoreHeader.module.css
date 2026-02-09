@@ -1,6 +1,6 @@
 .header {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .title {
@@ -30,6 +30,7 @@
   cursor: pointer;
   font-size: 0.875rem;
   transition: 0.2s ease;
+  border: none;
 }
 
 .chip:hover {
@@ -37,12 +38,12 @@
 }
 
 .active {
-  background-color: #111827;
+  background-color:#137fec;
   color: white;
 }
 
 .active:hover {
-  background-color: #1f2937;
+  background-color: #137fec;
 }
 
 /* Dark mode */

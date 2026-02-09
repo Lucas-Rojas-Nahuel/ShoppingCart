@@ -1,5 +1,6 @@
 .footer {
-  background-color: #f3f4f6; /* bg-gray-100 */
+  background-color: #f2f3f5; /* bg-gray-100 */
+
   color: #4b5563; /* text-gray-600 */
 }
 
@@ -52,11 +53,12 @@
 /* Links */
 .link {
   text-decoration: none;
+  color: #111827;
   transition: color 0.2s ease-in-out;
 }
 
 .link:hover {
-  color: var(--primary);
+  color: #137fec;
 }
 
 /* Divider bottom section */
@@ -101,12 +103,7 @@
   }
 }
 
-.logoIcon {
-  width: 1.5rem; /* h-6 w-6 */
-  height: 1.5rem;
-  color: var(--primary);
-}
-
 .logoText {
   font-weight: bold;
+  font-size: 1.8rem;
 }

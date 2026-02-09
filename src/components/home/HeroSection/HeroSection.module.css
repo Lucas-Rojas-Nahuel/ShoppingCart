@@ -77,18 +77,17 @@
 
 .button {
   display: flex;
-  min-width: 84px;
-  max-width: 480px;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.75rem;
+  align-items: center;
   background: #0083d1;
+  padding: 0.2rem 1.25rem;
+  border-radius: 0.75rem;
+  border: none;
   color: white;
-  font-weight: 700;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 1.1rem;
   transition: transform 0.2s;
-  cursor: pointer;
 }
 
 .button:hover {
@@ -99,10 +98,4 @@
   .button {
     height: 48px;
   }
-}
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

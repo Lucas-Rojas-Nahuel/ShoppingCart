@@ -1,4 +1,4 @@
- 
+import { Link } from "react-router";
 import styles from "./HeroSection.module.css";
 export const HeroSection = () => {
   return (
@@ -13,11 +13,11 @@ export const HeroSection = () => {
               </h2>
             </div>
 
-            <button className={styles.button}>
-              <span className={styles.truncate}>Comprar Ahora</span>
-            </button>
+            <Link to="products" className={styles.button}>
+              <p>Comprar Ahora</p>
+            </Link>
           </div>
-        </div> 
+        </div>
       </div>
     </section>
   );

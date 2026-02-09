@@ -1,19 +1,25 @@
+import { useState } from "react";
 import { useCart } from "../../../context/CartContext";
 import CartTableStyles from "../../../pages/stylesCart/CartTable.module.css";
 
 export default function ShoppingCartCard({ item }) {
-  const { addQuantity, removeQuantity, clearCart } = useCart();
+  const { addQuantity, removeQuantity, removeProduct } = useCart();
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <tr>
+    <tr> 
       <td>
         <div className={CartTableStyles.product}>
-          <div
-            className={CartTableStyles.image}
-            style={{
-              backgroundImage: `url('${item.product.image}')`,
-            }}
-          ></div>
+          <div className={CartTableStyles.image}>
+            {!imgLoaded && <div className={CartTableStyles.imgSkeleton}></div>}
+            <img
+              src={item.product.image}
+              loading="lazy"
+              alt={item.product.title}
+              onLoad={() => setImgLoaded(true)}
+              style={{ visibility: imgLoaded ? "visible" : "hidden" }}
+            />
+          </div>
 
           <div>
             <p className={CartTableStyles.productName}>{item.product.title}</p>
@@ -32,11 +38,14 @@ export default function ShoppingCartCard({ item }) {
       </td>
 
       <td className={CartTableStyles.hideMdRight}>
-        ${item.count * item.product.price}
+        ${(item.count * item.product.price).toFixed(2)}
       </td>
 
       <td>
-        <button onClick={() => clearCart()} className={CartTableStyles.delete}>
+        <button
+          onClick={() => removeProduct(item.product.id)}
+          className={CartTableStyles.delete}
+        >
           🗑
         </button>
       </td>

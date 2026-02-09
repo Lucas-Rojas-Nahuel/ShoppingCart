@@ -12,7 +12,7 @@ export default function useProductFilter(data) {
       category === "all"
         ? data
         : data.filter((product) => product.category === category)
-    );
+    ); 
   }, [data, category]);
 
   return { filtered, category, setCategory };
